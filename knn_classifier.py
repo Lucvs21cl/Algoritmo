@@ -1,17 +1,4 @@
-# -*- coding: utf-8 -*-
-"""Clasificación de Satisfacción de Pasajeros de Aerolíneas usando K-Means
 
-Archivo generado automáticamente por Colab.
-
-Archivo original ubicado en
-    https://colab.research.google.com/#fileId=https%3A//storage.googleapis.com/kaggle-colab-exported-notebooks/lucvs21cl/airline-passenger-satisfaction-k-means-clustering.104eb81a-3b14-4aa8-8eb1-a34740447e57.ipynb%3FX-Goog-Algorithm%3DGOOG4-RSA-SHA256%26X-Goog-Credential%3Dgcp-kaggle-com%2540kaggle-161607.iam.gserviceaccount.com/20250615/auto/storage/goog4_request%26X-Goog-Date%3D20250615T164730Z%26X-Goog-Expires%3D259200%26X-Goog-SignedHeaders%3Dhost%26X-Goog-Signature%3D6a967ca61ec2f57ea762d32eef7ee72d677dee75481868e26fe7ab4f5d55f70d237e99176a1c46cc994ce1cdd9aace0cc8d00457af066238e3a7db8e8672b9e94c3d53f8c32f894a06b55d2912a09ffccbdf91c2bc801b5e85e32190dc0369081d3b6269161c5fa85fab041d76133bfc895b369cdd748a0472b1ad789443bcc0e6cff72d62f6703564e3b37b944413fb0d339b3133897558af449be240681b9e3c542b2b769ed4a11dd5aab9c4e1b1029ba07e9b9cb73d91e00c47d74dfe60d93f50607d38b3de1c5d29c02bca32f9e14d24041eccb31eafb25a74bd8fcc744dff52dc2e57cc76d8b97c2bbb8c688da9d46e990633deaa03249c1a05e1880bc3
-"""
-
-# IMPORTANTE: EJECUTA ESTA CELDA PARA IMPORTAR TUS FUENTES DE DATOS DE KAGGLE,
-# LUEGO PUEDES ELIMINAR ESTA CELDA.
-# NOTA: ESTE ENTORNO DE NOTEBOOK ES DIFERENTE AL ENTORNO PYTHON DE KAGGLE
-# POR LO QUE PUEDEN FALTAR ALGUNAS BIBLIOTECAS UTILIZADAS POR TU
-# NOTEBOOK.
 import kagglehub
 teejmahal20_airline_passenger_satisfaction_path = kagglehub.dataset_download('teejmahal20/airline-passenger-satisfaction')
 
