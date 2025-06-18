@@ -1,0 +1,50 @@
+name: Ejecutar Menu
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # Se ejecuta diariamente a medianoche
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas numpy scikit-learn joblib
+    
+    - name: Run script with test data
+      run: |
+        echo "1" | python menu.py
+        # Los datos de prueba se ingresarán automáticamente
+        echo "20"  # Edad
+        echo "male"  # Género
+        echo "loyal customer"  # Tipo de Cliente
+        echo "business travel"  # Tipo de Viaje
+        echo "business"  # Clase
+        echo "1000"  # Distancia del vuelo
+        echo "4"  # WiFi
+        echo "4"  # Tiempo conveniente
+        echo "4"  # Reserva online
+        echo "4"  # Ubicación puerta
+        echo "4"  # Comida
+        echo "4"  # Embarque online
+        echo "4"  # Comodidad asiento
+        echo "4"  # Entretenimiento
+        echo "4"  # Servicio bordo
+        echo "4"  # Espacio piernas
+        echo "4"  # Equipaje
+        echo "4"  # Checkin
+        echo "4"  # Servicio vuelo
+        echo "4"  # Limpieza
+        echo "0"  # Retraso salida
+        echo "2"  # Opción para salir 
