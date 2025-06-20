@@ -1,4 +1,3 @@
-
 import kagglehub
 teejmahal20_airline_passenger_satisfaction_path = kagglehub.dataset_download('teejmahal20/airline-passenger-satisfaction')
 
@@ -19,6 +18,7 @@ from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 from yellowbrick.cluster import KElbowVisualizer
 import joblib
+from sklearn.metrics import silhouette_score
 
 import os
 
@@ -135,6 +135,12 @@ plt.show()
 cluster = data.groupby(['Cluster']).mean().T
 cluster.style.background_gradient(cmap='RdYlGn',axis=1)
 
+# Índice de silueta
+score = silhouette_score(data_pca, predictions)
+print(f"Índice de silueta: {score:.3f}")
+
+print(data['Cluster'].value_counts())
+
 """## Perfiles
 
 #### Grupo 0 - Viajeros de Negocios Frecuentes/Leales
@@ -225,3 +231,5 @@ columnas_para_guardar = [col for col in data.columns if col != 'Cluster']
 joblib.dump(columnas_para_guardar, os.path.join(current_dir, 'columnas.joblib'))
 
 print("Modelo, scaler, PCA y orden de columnas guardados exitosamente.")
+
+print(data.shape)
